@@ -4,6 +4,8 @@ PS1='╭╴${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[00m\]\033[0
 export PATH="$LLVM_HOME/bin:$PATH"
 export LLVM_HOME="/home/software/llvm"
 export LD_LIBRARY_PATH="$LLVM_HOME/lib:$LD_LIBRARY_PATH"
+export VIMINIT="source ~/.vimrc"
+export GREP_COLOR='1;35'
 
 alias llk='ls -l --block-size=K'
 alias llm='ls -l --block-size=M'
