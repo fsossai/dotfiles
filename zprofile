@@ -2,6 +2,7 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 export GREP_COLOR='1;35'
+export GREP_OPTIONS='--color=always'
 export peroni='fsv1684@peroni.cs.northwestern.edu'
 
 alias ll='ls -l --color'
