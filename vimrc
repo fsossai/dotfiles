@@ -3,6 +3,7 @@ set shiftwidth=2
 set hlsearch
 set backspace=indent,eol,start
 set number
+set nowrap
 syntax on
 
 nmap <silent> <A-k> :wincmd k<CR>
