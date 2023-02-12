@@ -9,4 +9,6 @@ export GREP_COLOR='1;35'
 
 alias llk='ls -l --block-size=K'
 alias llm='ls -l --block-size=M'
+alias ta="tmux attach -t"
+alias tl="tmux ls"
 
