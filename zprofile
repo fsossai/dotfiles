@@ -10,4 +10,5 @@ alias more='more -R'
 alias less='less -R'
 alias peroni='ssh $peroni'
 alias vi='nvim'
-
+alias ta="tmux attach -t"
+alias tl="tmux ls"
