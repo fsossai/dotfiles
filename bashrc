@@ -11,4 +11,5 @@ alias llk='ls -l --block-size=K'
 alias llm='ls -l --block-size=M'
 alias ta="tmux attach -t"
 alias tl="tmux ls"
+alias hist="awk '{a[\$0]++} END{ for(k in a) { print k,a[k] } }' | sort -rnk 2 | column -t"
 
