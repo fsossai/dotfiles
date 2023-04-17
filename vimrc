@@ -24,3 +24,4 @@ let g:tokyonight_enable_italic = 1
 
 colorscheme tokyonight
 
+au BufRead,BufNewFile *.job set syntax=bash
