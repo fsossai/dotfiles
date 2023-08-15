@@ -51,4 +51,5 @@ endfunction
 vnoremap <silent> <Leader>d :<c-u>call Demangle()<CR>
 
 nnoremap <leader>q :noh<CR>
+nnoremap <leader>w :w<CR>
 
