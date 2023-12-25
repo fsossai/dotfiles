@@ -52,4 +52,11 @@ vnoremap <silent> <Leader>d :<c-u>call Demangle()<CR>
 
 nnoremap <leader>q :noh<CR>
 nnoremap <leader>w :w<CR>
-
+nnoremap <leader>s :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>
+"map = -
+"map - CTRL-M <CR>
+nnoremap j +
+nnoremap k -
+nnoremap - j
+nnoremap + k
+nnoremap = k
