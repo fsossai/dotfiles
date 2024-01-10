@@ -59,3 +59,4 @@ nnoremap + k
 nnoremap = k
 nnoremap ! :bprevious<CR>
 nnoremap @ :bnext<CR>
+nnoremap Q :buffer #<CR>
