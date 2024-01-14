@@ -48,16 +48,36 @@ function! Demangle()
   echo system("c++filt", join(lines, "\n")) "\n"
 endfunction
 
+function! OpenBitcode()
+  if filereadable(expand('%:r') . '.ll')
+    edit %:r.ll
+    set syntax=lifelines
+  else
+    silent execute '%!llvm-dis -f -o /dev/stdout %'
+    file %:r.ll
+    set syntax=lifelines
+    set readonly
+  endif
+endfunction
+
 vnoremap <silent> <Leader>d :<c-u>call Demangle()<CR>
+
 nnoremap <leader>q :noh<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>s :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hls<CR>
+"map = -
+"map - CTRL-M <CR>
 nnoremap j +
 nnoremap k -
 nnoremap - j
 nnoremap + k
 nnoremap = k
+
+"nnoremap <C-9> :bprevious<CR>
+"nnoremap <C-0> :bnext<CR>
 nnoremap ! :bprevious<CR>
 nnoremap @ :bnext<CR>
 nnoremap Q :buffer #<CR>
 nnoremap <leader>r :bdelete %<CR>
+
+autocmd BufReadPost *.bc :call OpenBitcode()
