@@ -45,13 +45,13 @@ vnoremap <silent> <Leader>d :<c-u>call Demangle()<CR>
 nnoremap <leader>q :nohlsearch<CR>
 nnoremap <leader>w :write<CR>
 nnoremap <leader>s :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hlsearch<CR>
-inoremap i +
 nnoremap k -
 nnoremap - j
 nnoremap + k
 nnoremap = k
 nnoremap Z <C-E>
 nnoremap X <C-Y>
+nnoremap <C-X> <C-Y>
 nnoremap < <C-E>
 nnoremap > <C-Y>
 nnoremap ! :bprevious<CR>
@@ -59,6 +59,7 @@ nnoremap @ :bnext<CR>
 nnoremap Q :buffer #<CR>
 nnoremap <leader>r :bdelete %<CR>
 nnoremap <leader>m :call WrapOrNowrap()<CR>
+vnoremap <leader>c :'<,'>!lua ~/.config/nvim/lua/comment.lua %:e<CR>
 
 " --- functions ------------------------------------------------------
 
@@ -86,4 +87,3 @@ function! OpenBitcode()
     set readonly
   endif
 endfunction
-
