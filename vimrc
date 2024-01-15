@@ -60,6 +60,7 @@ nnoremap Q :buffer #<CR>
 nnoremap <leader>r :bdelete %<CR>
 nnoremap <leader>m :call WrapOrNowrap()<CR>
 vnoremap <leader>c :'<,'>!lua ~/.config/nvim/lua/comment.lua %:e<CR>
+vnoremap <leader>u :'<,'>!lua ~/.config/nvim/lua/uncomment.lua %:e<CR>
 
 " --- functions ------------------------------------------------------
 
