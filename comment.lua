@@ -32,7 +32,7 @@ function getCommentSymbol()
     if contains({
       "java","cpp","c","cs","js", "rs","go","swift",
       "json","kt","ts"}, ext) then
-      return "// "
+      return "//"
     elseif contains({"py","sh","awk","rb","pl"}, ext) then
       return "#"
     elseif contains({"f90","f"}, ext) then
