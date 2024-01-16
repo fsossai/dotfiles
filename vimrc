@@ -61,6 +61,10 @@ nnoremap <leader>r :bdelete %<CR>
 nnoremap <leader>m :call WrapOrNowrap()<CR>
 vnoremap <leader>c :'<,'>!lua ~/.config/nvim/lua/comment.lua %:e<CR>
 vnoremap <leader>u :'<,'>!lua ~/.config/nvim/lua/uncomment.lua %:e<CR>
+vnoremap <leader>z :<C-U>call NoelleSCC("enable","selection")<CR>
+nnoremap <leader>z :<C-U>call NoelleSCC("enable","all")<CR>
+vnoremap <leader>Z :<C-U>call NoelleSCC("disable","selection")<CR>
+nnoremap <leader>Z :<C-U>call NoelleSCC("disable","all")<CR>
 
 " --- functions ------------------------------------------------------
 
@@ -87,4 +91,18 @@ function! OpenBitcode()
     set syntax=lifelines
     set readonly
   endif
+endfunction
+
+function! NoelleSCC(action, mode)
+  if a:mode == "all"
+    let lines = getline(1, "$")
+  elseif a:mode == "selection"
+    let lines = getline(getpos("'<")[1], getpos("'>")[1])
+  else
+    return
+  endif
+
+  let cmd = "lua ~/.config/nvim/lua/noelle_scc_highlight.lua "
+  let cmd = cmd . a:action . " " . a:mode
+  execute system(cmd, lines)
 endfunction
