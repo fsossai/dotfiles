@@ -30,7 +30,7 @@ end
 function getCommentSymbol()
   local ext = arg[1]
     if contains({
-      "java","cpp","c","cs","js", "rs","go","swift",
+      "java","cpp","c","h","hpp","cs","js", "rs","go","swift",
       "json","kt","ts"}, ext) then
       return "//"
     elseif contains({"py","sh","awk","rb","pl"}, ext) then
