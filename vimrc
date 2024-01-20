@@ -60,11 +60,12 @@ nnoremap Q :buffer #<CR>
 nnoremap <leader>r :bdelete %<CR>
 nnoremap <leader>m :call WrapOrNowrap()<CR>
 vnoremap <leader>c :'<,'>!lua ~/.config/nvim/lua/comment.lua %:e<CR>
-vnoremap <leader>u :'<,'>!lua ~/.config/nvim/lua/uncomment.lua %:e<CR>
+vnoremap <leader>C :'<,'>!lua ~/.config/nvim/lua/uncomment.lua %:e<CR>
 vnoremap <leader>z :<C-U>call NoelleSCC("enable","selection")<CR>
 nnoremap <leader>z :<C-U>call NoelleSCC("enable","all")<CR>
 vnoremap <leader>Z :<C-U>call NoelleSCC("disable","selection")<CR>
 nnoremap <leader>Z :<C-U>call NoelleSCC("disable","all")<CR>
+nnoremap <leader>v :call ReplaceInplace()<CR>
 
 " --- functions ------------------------------------------------------
 
@@ -102,7 +103,12 @@ function! NoelleSCC(action, mode)
     return
   endif
 
-  let cmd = "lua ~/.config/nvim/lua/noelle_scc_highlight.lua "
+  let cmd = "lua ~/.config/nvim/lua/noelle_scc.lua "
   let cmd = cmd . a:action . " " . a:mode
   execute system(cmd, lines)
+endfunction
+
+function! ReplaceInplace()
+  normal! caw
+  normal! "0p
 endfunction
