@@ -18,10 +18,10 @@ set cindent
 set cinkeys-=0#
 set indentkeys-=0#
 set termguicolors
+set cursorline
 syntax on
-" colorscheme tokyonight-night
 colorscheme tokyonight-moon
-hi Normal guibg=none
+highlight cursorline guibg=#243050
 
 " --- files ----------------------------------------------------------
 

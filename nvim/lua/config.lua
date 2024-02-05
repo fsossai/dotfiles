@@ -15,9 +15,9 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup {
   "folke/zen-mode.nvim",
+  { "folke/tokyonight.nvim", lazy=false, opts = { transparent=true } },
   "junegunn/fzf",
   "junegunn/fzf.vim",
-  { "folke/tokyonight.nvim", lazy=false },
   "morhetz/gruvbox",
   "nvim-treesitter/nvim-treesitter",
   "ghifarit53/tokyonight-vim",
