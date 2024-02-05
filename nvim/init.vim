@@ -1,12 +1,8 @@
+lua require("config")
+
 " --- plugins --------------------------------------------------------
 
 call plug#begin()
-Plug 'morhetz/gruvbox'
-Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
-Plug 'ghifarit53/tokyonight-vim'
-Plug 'eandrju/cellular-automaton.nvim'
-Plug '~/.fzf'
-" Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
 " --- general --------------------------------------------------------
@@ -23,7 +19,8 @@ set cinkeys-=0#
 set indentkeys-=0#
 set termguicolors
 syntax on
-colorscheme tokyonight-night
+" colorscheme tokyonight-night
+colorscheme tokyonight-moon
 hi Normal guibg=none
 
 " --- files ----------------------------------------------------------
@@ -53,7 +50,10 @@ nnoremap Z <C-E>
 nnoremap X <C-Y>
 nnoremap <C-X> <C-Y>
 nnoremap < <C-E>
-nnoremap > <C-Y>
+nnoremap > <C-Y> 
+nnoremap u :undo<CR>
+nnoremap <C-U> :redo<CR>
+nnoremap <C-R> :Files<CR>
 nnoremap ! :bprevious<CR>
 nnoremap @ :bnext<CR>
 nnoremap Q :buffer #<CR>

@@ -1,0 +1,67 @@
+MACHINE='peroni'
+PS1='╭╴\[\033[01;32m\]\u\033[01;34m@\033[0m$?:\033[01;35m${MACHINE}:\[\033[01;34m\]\w\[\033[00m\]\n╰╼$ \[\e[0m\]'
+
+LLVM_HOME="/home/software/llvm"
+
+export GREP_COLOR='1;35'
+export LD_LIBRARY_PATH="$LLVM_HOME/lib:$LD_LIBRARY_PATH"
+export LD_LIBRARY_PATH="/nfs-scratch/fsv1684/.local/lib:$LD_LIBRARY_PATH"
+export PARSIM_ROOT="/nfs-scratch/fsv1684/MTCA/Parsimony-CGO23"
+export PATH="$LLVM_HOME/bin:$PATH"
+export PATH="/home/fsv1684/neovim/install/bin:$PATH"
+export PATH="/home/fsv1684/s/ispc-v1.20.0-linux/bin:$PATH"
+export PATH="/home/fsv1684/s/pin-3.27-98718-gbeaa5d51e-gcc-linux:$PATH"
+export PATH="/home/fsv1684/s/repo/neovim/install/bin:$PATH"
+export PATH="/nfs-scratch/fsv1684/.local/bin:$PATH"
+export PATH="/home/fsv1684/.local/bin:$PATH"
+export VIMINIT="source ~/.vimrc"
+
+alias clang-15='/nfs-scratch/fsv1684/llvm-15.0.1/build/bin/clang++'
+alias clang-16='/nfs-scratch/fsv1684/llvm-16.0.3/build/bin/clang++'
+alias dubliner='ssh federico@dubliner.cs.northwestern.edu'
+alias egrep='egrep --color=auto'
+alias em='emacs -nw'
+alias enable-gino='source /nfs-scratch/fsv1684/gino/enable'
+alias enable-gllvm='source /project/gllvm/enable'
+alias enable-go='source /project/go/go_1.13.7/enable'
+alias enable-llvm14='source /project/extra/llvm/14.0.6/enable'
+alias enable-llvm15='source /nfs-scratch/fsv1684/llvm-15.0.1/enable'
+alias enable-llvm16='source /nfs-scratch/fsv1684/llvm-16.0.3/enable'
+alias enable-llvm17='source /nfs-scratch/fsv1684/llvm-17.0.6/enable'
+alias enable-llvm9='source /project/extra/llvm/9.0.0/enable'
+alias enable-noelle='source /nfs-scratch/fsv1684/noelle/enable'
+alias enable-spec="export SPEC=/home/fsv1684/s/wholeprogram_benchmarks/build/SPEC2017/SPEC2017"
+alias fgrep='fgrep --color=auto'
+alias grep='grep --color=auto'
+alias hist="awk '{a[\$0]++} END{ for(k in a) { print k,a[k] } }' | sort -rnk 2 | column -t"
+alias hyperfine="/home/fsv1684/s/repo/hyperfine/target/release/hyperfine"
+alias llk='ls -l --block-size=K'
+alias llk='ls -l --block-size=K'
+alias ll='ls -l --color=auto'
+alias llm='ls -l --block-size=M'
+alias llm='ls -l --block-size=M'
+alias l.='ls -d .* --color=auto'
+alias ls='ls --color=auto'
+alias moore='ssh fsv1684@moore.wot.eecs.northwestern.edu'
+alias ncdu='/nfs-scratch/fsv1684/ncdu --color=off'
+alias opt-15='/nfs-scratch/fsv1684/llvm-15.0.1/build/bin/opt'
+alias opt-16='/nfs-scratch/fsv1684/llvm-16.0.3/build/bin/opt'
+alias qq='condor_q'
+alias qsub='condor_submit'
+alias qw='watch -n 1 condor_q'
+alias ta='tmux attach -t'
+alias tl='tmux ls'
+alias tm='tmux new-session -A -s main'
+alias vim='nvim'
+alias vi='nvim'
+alias xzegrep='xzegrep --color=auto'
+alias xzfgrep='xzfgrep --color=auto'
+alias xzgrep='xzgrep --color=auto'
+alias zegrep='zegrep --color=auto'
+alias zfgrep='zfgrep --color=auto'
+alias zgrep='zgrep --color=auto'
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+source "/nfs-scratch/fsv1684/repo/json-parser/install/enable"
+source "/project/extra/llvm/9.0.0/enable"
+source "/nfs-scratch/fsv1684/repo/condor-tools/enable"
