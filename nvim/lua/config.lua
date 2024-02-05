@@ -20,7 +20,6 @@ require("lazy").setup {
   "junegunn/fzf.vim",
   "morhetz/gruvbox",
   "nvim-treesitter/nvim-treesitter",
-  "ghifarit53/tokyonight-vim",
   "nvim-lua/plenary.nvim",
   "MunifTanjim/nui.nvim",
   "sindrets/diffview.nvim",
