@@ -22,6 +22,8 @@ require("lazy").setup {
   { "junegunn/fzf.vim" },
   { "morhetz/gruvbox" },
   { "nvim-treesitter/nvim-treesitter" },
+  { "neovim/nvim-lspconfig" },
+  { "williamboman/nvim-lsp-installer" },
   { "nvim-lua/plenary.nvim" },
   { "MunifTanjim/nui.nvim" },
   { "sindrets/diffview.nvim" },
@@ -91,5 +93,17 @@ require("lualine").setup {
   inactive_winbar = {},
   extensions = {}
 }
+
+local lspconfig = require("lspconfig")
+lspconfig.pyright.setup {}
+lspconfig.clangd.setup {}
+lspconfig.rust_analyzer.setup {
+  -- Server-specific settings. See `:help lspconfig-setup`
+  settings = {
+    ['rust-analyzer'] = {},
+  },
+}
+
+require("nvim-lsp-installer").setup {}
 
 vim.cmd("source " .. vim.fn.stdpath("config") .. "/config.vim")

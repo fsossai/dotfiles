@@ -45,8 +45,11 @@ alias xzgrep="xzgrep --color=auto"
 alias zegrep="zegrep --color=auto"
 alias zfgrep="zfgrep --color=auto"
 alias zgrep="zgrep --color=auto"
+
 bind "set show-all-if-ambiguous on"
 bind "TAB:menu-complete"
+bind '"\e[Z":menu-complete-backward'
+
 export GREP_COLOR="1;35"
 export LD_LIBRARY_PATH="/nfs-scratch/fsv1684/.local/lib:$LD_LIBRARY_PATH"
 export PATH="/home/fsv1684/.local/bin:$PATH"
@@ -55,7 +58,8 @@ export PATH="/home/fsv1684/s/ispc-v1.20.0-linux/bin:$PATH"
 export PATH="/home/fsv1684/s/pin-3.27-98718-gbeaa5d51e-gcc-linux:$PATH"
 export PATH="/home/fsv1684/s/repo/neovim/install/bin:$PATH"
 export PATH="/nfs-scratch/fsv1684/.local/bin:$PATH"
+export PATH="/nfs-scratch/fsv1684/repo/condor-tools/bin:$PATH"
+
 source "/home/fsv1684/.fzf.bash"
-source "/nfs-scratch/fsv1684/repo/condor-tools/enable"
 source "/nfs-scratch/fsv1684/repo/json-parser/enable"
 source "/project/extra/llvm/9.0.0/enable"
