@@ -1,5 +1,3 @@
-lua require("config")
-
 " --- plugins --------------------------------------------------------
 
 call plug#begin()
@@ -57,7 +55,8 @@ nnoremap < <C-E>
 nnoremap > <C-Y> 
 nnoremap u :undo<CR>
 nnoremap <C-U> :redo<CR>
-nnoremap <C-F> :Files<CR>
+nnoremap <C-R> :Files<CR>
+nnoremap <C-G> :Neogit<CR>
 nnoremap ! :bprevious<CR>
 nnoremap @ :bnext<CR>
 nnoremap Q :buffer #<CR>
