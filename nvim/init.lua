@@ -16,7 +16,8 @@ require("lazy").setup {
   { "folke/zen-mode.nvim" },
   { "folke/tokyonight.nvim", lazy = false, opts = { transparent = true } },
   { "catppuccin/nvim", name = "catppuccin", opts = { transparent_background = true } },
-  { "nvim-tree/nvim-web-devicons", lazy = true },
+  { "nvim-tree/nvim-web-devicons" },
+  { "nvim-tree/nvim-tree.lua", name = "nvim-tree" },
   { "nvim-lualine/lualine.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
   { "junegunn/fzf" },
   { "junegunn/fzf.vim" },
@@ -29,7 +30,6 @@ require("lazy").setup {
   { "sindrets/diffview.nvim" },
   { "mbbill/undotree" },
   { "preservim/tagbar" },
-  { "kyazdani42/nvim-tree.lua" },
   { "nvim-telescope/telescope.nvim" },
   { "ibhagwan/fzf-lua" },
   { "rhysd/vim-clang-format" },
@@ -93,6 +93,8 @@ require("lualine").setup {
   inactive_winbar = {},
   extensions = {}
 }
+
+require("nvim-tree").setup()
 
 local lspconfig = require("lspconfig")
 lspconfig.pyright.setup {}
