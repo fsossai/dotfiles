@@ -19,9 +19,13 @@ set cinkeys-=0#
 set indentkeys-=0#
 set termguicolors
 set cursorline
+set encoding=utf8
+let g:airline_powerline_fonts = 1
 syntax on
-colorscheme tokyonight-moon
-highlight cursorline guibg=#243050
+colorscheme tokyonight-night 
+highlight cursorline guibg=#3a3a3a
+highlight Visual guibg=#555555
+" highlight Visual guibg=#101010 guifg=#a0a0a0
 
 " --- files ----------------------------------------------------------
 
@@ -53,7 +57,7 @@ nnoremap < <C-E>
 nnoremap > <C-Y> 
 nnoremap u :undo<CR>
 nnoremap <C-U> :redo<CR>
-nnoremap <C-R> :Files<CR>
+nnoremap <C-F> :Files<CR>
 nnoremap ! :bprevious<CR>
 nnoremap @ :bnext<CR>
 nnoremap Q :buffer #<CR>
