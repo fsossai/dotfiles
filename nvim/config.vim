@@ -37,6 +37,7 @@ nmap <silent> <A-j> :wincmd j<CR>
 nmap <silent> <A-h> :wincmd h<CR>
 nmap <silent> <A-l> :wincmd l<CR>
 nmap <silent> <A-p> :wincmd p<CR>
+nmap <silent> <A-Space> :wincmd w<CR>
 vnoremap <silent> <Leader>d :<c-u>call Demangle()<CR>
 nnoremap <leader>q :nohlsearch<CR>
 nnoremap <leader>w :write<CR>
