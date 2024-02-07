@@ -36,10 +36,10 @@ nmap <silent> <A-k> :wincmd k<CR>
 nmap <silent> <A-j> :wincmd j<CR>
 nmap <silent> <A-h> :wincmd h<CR>
 nmap <silent> <A-l> :wincmd l<CR>
-nnoremap <C-H> <C-W>h
-nnoremap <C-J> <C-W>j
-nnoremap <C-K> <C-W>k
-nnoremap <C-L> <C-W>l
+nnoremap <C-J> :wincmd h
+nnoremap <C-K> :wincmd l
+nnoremap <C-K> :wincmd l
+nnoremap <C-P> :wincmd p
 vnoremap <silent> <Leader>d :<c-u>call Demangle()<CR>
 nnoremap <leader>q :nohlsearch<CR>
 nnoremap <leader>w :write<CR>
@@ -56,10 +56,10 @@ nnoremap > <C-Y>
 nnoremap u :undo<CR>
 nnoremap <C-U> :redo<CR>
 nnoremap <C-R> :Telescope find_files<CR>
-nnoremap <C-G> :Neogit<CR>
 nnoremap <leader>t :NvimTreeFocus<CR>
 nnoremap <leader>e :Texplore<CR>
 nnoremap <leader>g :Neogit<CR>
+nnoremap <leader>G :Neogit cwd=%:p:h<CR>
 nnoremap ! :bprevious<CR>
 nnoremap @ :bnext<CR>
 nnoremap Q :buffer #<CR>
