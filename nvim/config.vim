@@ -60,6 +60,8 @@ nnoremap <leader>t :NvimTreeFocus<CR>
 nnoremap <leader>e :Texplore<CR>
 nnoremap <leader>g :Neogit<CR>
 nnoremap <leader>G :Neogit cwd=%:p:h<CR>
+nnoremap <leader>` :FloatermNew --cwd=<buffer><CR>
+nnoremap <F6> :FloatermNew<CR>
 nnoremap ! :bprevious<CR>
 nnoremap @ :bnext<CR>
 nnoremap Q :buffer #<CR>

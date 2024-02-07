@@ -36,7 +36,9 @@ require("lazy").setup {
   { "weilbith/nvim-code-action-menu" },
   { "aznhe21/actions-preview.nvim" },
   { "echasnovski/mini.nvim", version = "*" },
-  { "NeogitOrg/neogit", dependencies = { "nvim-lua/plenary.nvim" }, config = true }
+  { "NeogitOrg/neogit", dependencies = { "nvim-lua/plenary.nvim" }, config = true },
+  { "voldikss/vim-floaterm" },
+  { "tamton-aquib/zone.nvim" }
 }
 
 require("lualine").setup {
