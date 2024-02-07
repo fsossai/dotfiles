@@ -56,8 +56,8 @@ nnoremap <C-U> :redo<CR>
 nnoremap <C-R> :Telescope find_files<CR>
 nnoremap <leader>t :NvimTreeFocus<CR>
 nnoremap <leader>e :Texplore<CR>
-nnoremap <leader>g :Neogit<CR>
-nnoremap <leader>G :Neogit cwd=%:p:h<CR>
+nnoremap <leader>g :Neogit cwd=%:p:h<CR>
+nnoremap <leader>G :Neogit<CR>
 nnoremap <leader>` :FloatermNew --cwd=<buffer><CR>
 nnoremap <F6> :FloatermNew<CR>
 tnoremap <Esc> <C-\><C-n>
