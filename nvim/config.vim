@@ -57,7 +57,9 @@ nnoremap u :undo<CR>
 nnoremap <C-U> :redo<CR>
 nnoremap <C-R> :Telescope find_files<CR>
 nnoremap <C-G> :Neogit<CR>
-nnoremap <C-T> :NvimTreeToggle<CR>
+nnoremap <leader>t :NvimTreeFocus<CR>
+nnoremap <leader>e :Texplore<CR>
+nnoremap <leader>g :Neogit<CR>
 nnoremap ! :bprevious<CR>
 nnoremap @ :bnext<CR>
 nnoremap Q :buffer #<CR>
