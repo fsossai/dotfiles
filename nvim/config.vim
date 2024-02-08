@@ -42,6 +42,10 @@ vnoremap <silent> <Leader>d :<c-u>call Demangle()<CR>
 nnoremap <leader>q :nohlsearch<CR>
 nnoremap <leader>w :write<CR>
 nnoremap <leader>s :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hlsearch<CR>
+nnoremap <C-A-H> :vertical resize +5<CR>
+nnoremap <C-A-L> :vertical resize -5<CR>
+nnoremap <C-A-J> :resize +3<CR>
+nnoremap <C-A-K> :resize -3<CR>
 nnoremap k -
 nnoremap - j
 nnoremap + k
