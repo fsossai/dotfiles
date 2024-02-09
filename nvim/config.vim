@@ -50,8 +50,10 @@ nnoremap k -
 nnoremap - j
 nnoremap + k
 nnoremap = k
-nnoremap Z <C-E>
-nnoremap X <C-Y>
+nnoremap Z 2<C-E>
+nnoremap X 2<C-Y>
+nnoremap <C-A-E> 3<C-E>
+nnoremap <C-A-X> 3<C-Y>
 nnoremap <C-X> <C-Y>
 nnoremap < <C-E>
 nnoremap > <C-Y> 
