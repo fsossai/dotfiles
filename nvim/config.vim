@@ -54,17 +54,20 @@ nnoremap Z 2<C-E>
 nnoremap X 2<C-Y>
 nnoremap <C-A-E> 3<C-E>
 nnoremap <C-A-X> 3<C-Y>
+nnoremap <C-A-Y> 3<C-Y>
 nnoremap <C-X> <C-Y>
 nnoremap < <C-E>
 nnoremap > <C-Y> 
 nnoremap u :undo<CR>
 nnoremap <C-U> :redo<CR>
-nnoremap <C-R> :Telescope find_files<CR>
+nnoremap <C-R> :Buffer<CR>
+nnoremap <C-A-R> :Telescope find_files<CR>
 nnoremap <leader>t :NvimTreeFocus<CR>
 nnoremap <leader>e :Texplore<CR>
 nnoremap <leader>g :Neogit cwd=%:p:h<CR>
 nnoremap <leader>G :Neogit<CR>
 nnoremap <leader>` :FloatermNew --cwd=<buffer><CR>
+nnoremap <C-P> :Buffer<CR>
 nnoremap <F6> :FloatermNew<CR>
 tnoremap <Esc> <C-\><C-n>
 nnoremap ! :bprevious<CR>
