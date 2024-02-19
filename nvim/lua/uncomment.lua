@@ -16,7 +16,7 @@ function getCommentSymbol()
       "java","cpp","c","h","hpp","cs","js", "rs","go","swift",
       "json","kt","ts"}, ext) then
       return "//"
-    elseif contains({"py","sh","awk","rb","pl"}, ext) then
+    elseif contains({"py","sh","awk","rb","pl","txt"}, ext) then
       return "#"
     elseif contains({"f90","f"}, ext) then
       return "!"
