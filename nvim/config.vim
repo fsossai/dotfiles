@@ -59,7 +59,7 @@ nnoremap <C-X> <C-Y>
 nnoremap < <C-E>
 nnoremap > <C-Y> 
 nnoremap u :undo<CR>
-nnoremap <C-U> :redo<CR>
+nnoremap U :redo<CR>
 nnoremap <C-R> :Buffer<CR>
 nnoremap <C-A-R> :Telescope find_files<CR>
 nnoremap <leader>t :NvimTreeFocus<CR>
