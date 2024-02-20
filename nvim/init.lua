@@ -41,6 +41,7 @@ require("lazy").setup {
   { "tamton-aquib/zone.nvim" },
   { "hrsh7th/nvim-cmp" },
   { "hrsh7th/cmp-nvim-lsp" },
+  { "hrsh7th/vim-vsnip" }
 }
 
 require("lualine").setup {
