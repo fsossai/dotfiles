@@ -50,6 +50,8 @@ bind "set show-all-if-ambiguous on"
 bind "TAB:menu-complete"
 bind '"\e[Z":menu-complete-backward'
 
+export C_INCLUDE_PATH="/nfs-scratch/fsv1684/.local/include:$C_INCLUDE_PATH" 
+export CPLUS_INCLUDE_PATH="/nfs-scratch/fsv1684/.local/include:$CPLUS_INCLUDE_PATH" 
 export GREP_COLOR="1;35"
 export LD_LIBRARY_PATH="/nfs-scratch/fsv1684/.local/lib:$LD_LIBRARY_PATH"
 export PATH="/home/fsv1684/.local/bin:$PATH"
@@ -62,5 +64,5 @@ export PATH="/nfs-scratch/fsv1684/repo/condor-tools/bin:$PATH"
 
 source "/home/fsv1684/.fzf.bash"
 source "/nfs-scratch/fsv1684/repo/json-parser/enable"
-source "/project/extra/llvm/9.0.0/enable"
+source "/nfs-scratch/fsv1684/llvm-17.0.6/enable"
 export SPEC="/nfs-scratch/fsv1684/pspdg/gym/all_benchmark_suites/build/SPEC2017/SPEC2017"
