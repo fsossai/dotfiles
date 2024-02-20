@@ -55,6 +55,8 @@ nnoremap < <C-E>
 nnoremap > <C-Y> 
 nnoremap u :undo<CR>
 nnoremap U :redo<CR>
+nnoremap <C-G> :Telescope grep_string<CR>
+nnoremap <C-S> :Telescope git_status<CR>
 nnoremap <C-R> :Buffer<CR>
 nnoremap <C-A-R> :Telescope find_files<CR>
 nnoremap <leader>t :NvimTreeFocus<CR>

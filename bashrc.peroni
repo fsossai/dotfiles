@@ -64,5 +64,5 @@ export PATH="/nfs-scratch/fsv1684/repo/condor-tools/bin:$PATH"
 
 source "/home/fsv1684/.fzf.bash"
 source "/nfs-scratch/fsv1684/repo/json-parser/enable"
-source "/nfs-scratch/fsv1684/llvm-17.0.6/enable"
+source "/project/extra/llvm/9.0.0/enable"
 export SPEC="/nfs-scratch/fsv1684/pspdg/gym/all_benchmark_suites/build/SPEC2017/SPEC2017"
