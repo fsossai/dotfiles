@@ -13,36 +13,54 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup {
-  { "folke/zen-mode.nvim" },
-  { "folke/tokyonight.nvim", lazy = false, opts = { transparent = true } },
+  { "aznhe21/actions-preview.nvim" },
   { "catppuccin/nvim", name = "catppuccin", opts = { transparent_background = true } },
-  { "nvim-tree/nvim-web-devicons" },
-  { "nvim-tree/nvim-tree.lua", name = "nvim-tree" },
-  { "nvim-lualine/lualine.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
+  { "echasnovski/mini.nvim", version = "*" },
+  { "folke/tokyonight.nvim", lazy = false, opts = { transparent = true } },
+  { "folke/zen-mode.nvim" },
+  { "hrsh7th/cmp-nvim-lsp" },
+  { "hrsh7th/nvim-cmp" },
+  { "hrsh7th/vim-vsnip" },
+  { "ibhagwan/fzf-lua" },
   { "junegunn/fzf" },
   { "junegunn/fzf.vim" },
-  { "morhetz/gruvbox" },
-  { "nvim-treesitter/nvim-treesitter" },
-  { "neovim/nvim-lspconfig" },
-  { "williamboman/nvim-lsp-installer" },
-  { "nvim-lua/plenary.nvim" },
-  { "MunifTanjim/nui.nvim" },
-  { "sindrets/diffview.nvim" },
   { "mbbill/undotree" },
-  { "preservim/tagbar" },
-  { "nvim-telescope/telescope.nvim" },
-  { "ibhagwan/fzf-lua" },
-  { "rhysd/vim-clang-format" },
-  { "weilbith/nvim-code-action-menu" },
-  { "aznhe21/actions-preview.nvim" },
-  { "echasnovski/mini.nvim", version = "*" },
+  { "morhetz/gruvbox" },
+  { "MunifTanjim/nui.nvim" },
   { "NeogitOrg/neogit", dependencies = { "nvim-lua/plenary.nvim" }, config = true },
-  { "voldikss/vim-floaterm" },
+  { "neovim/nvim-lspconfig" },
+  { "nvim-lualine/lualine.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
+  { "nvim-lua/plenary.nvim" },
+  { "nvim-telescope/telescope.nvim" },
+  { "nvim-tree/nvim-tree.lua", name = "nvim-tree" },
+  { "nvim-tree/nvim-web-devicons" },
+  { "nvim-treesitter/nvim-treesitter" },
+  { "preservim/tagbar" },
+  { "rhysd/vim-clang-format" },
+  { "sindrets/diffview.nvim" },
   { "tamton-aquib/zone.nvim" },
-  { "hrsh7th/nvim-cmp" },
-  { "hrsh7th/cmp-nvim-lsp" },
-  { "hrsh7th/vim-vsnip" }
+  { "voldikss/vim-floaterm" },
+  { "weilbith/nvim-code-action-menu" },
+  { "williamboman/nvim-lsp-installer" },
+  { "williamboman/mason.nvim" },
+  { "williamboman/mason-lspconfig.nvim" },
 }
+
+require("nvim-treesitter.configs").setup {
+  incremental_selection = { 
+    enable = true,
+    keymaps = {
+      init_selection = ".",
+      scope_incremental = "<CR>",
+      node_incremental = ".",
+      node_decremental = ",",
+    },
+  },
+  highlight = {
+    enable = true,
+  },
+}
+
 
 require("lualine").setup {
   options = {
@@ -191,5 +209,16 @@ lspconfig.rust_analyzer.setup {
 }
 
 require("nvim-lsp-installer").setup {}
+require("mason").setup {}
+require("mason-lspconfig").setup {
+  ensure_installed = {
+    -- "clangd",
+    -- "pyright",
+  },
+  automatic_installation = true,
+}
+require("mason-lspconfig").setup_handlers {
+  -- require("core.lsp").setup_server
+}
 
 vim.cmd("source " .. vim.fn.stdpath("config") .. "/config.vim")
