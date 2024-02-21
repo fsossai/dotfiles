@@ -27,58 +27,58 @@ autocmd BufReadPost *.bc :call OpenBitcode()
 
 " --- map ------------------------------------------------------------
 
-nmap <silent> <A-k> :wincmd k<CR>
-nmap <silent> <A-j> :wincmd j<CR>
 nmap <silent> <A-h> :wincmd h<CR>
+nmap <silent> <A-j> :wincmd j<CR>
+nmap <silent> <A-k> :wincmd k<CR>
 nmap <silent> <A-l> :wincmd l<CR>
 nmap <silent> <A-p> :wincmd p<CR>
 nmap <silent> <A-Space> :wincmd w<CR>
-vnoremap <silent> <Leader>d :<c-u>call Demangle()<CR>
-nnoremap <leader>q :nohlsearch<CR>
-nnoremap <leader>w :write<CR>
-nnoremap <leader>s :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hlsearch<CR>
+nnoremap @ :bnext<CR>
+nnoremap ! :bprevious<CR>
+nnoremap <C-A-E> 3<C-E>
 nnoremap <C-A-H> :vertical resize +5<CR>
-nnoremap <C-A-L> :vertical resize -5<CR>
 nnoremap <C-A-J> :resize +3<CR>
 nnoremap <C-A-K> :resize -3<CR>
-nnoremap k -
+nnoremap <C-A-L> :vertical resize -5<CR>
+nnoremap <C-A-R> :Telescope find_files<CR>
+nnoremap <C-A-X> 3<C-Y>
+nnoremap <C-A-Y> 3<C-Y>
+nnoremap < <C-E>
+nnoremap <C-G> :Telescope grep_string<CR>
+nnoremap <C-P> :Buffer<CR>
+nnoremap <C-R> :Buffer<CR>
+nnoremap <C-S> :Telescope git_status<CR>
+nnoremap <C-X> <C-Y>
+nnoremap > <C-Y> 
+nnoremap <F6> :FloatermNew<CR>
 nnoremap - j
 nnoremap + k
 nnoremap = k
-nnoremap Z 2<C-E>
-nnoremap X 2<C-Y>
-nnoremap <C-A-E> 3<C-E>
-nnoremap <C-A-X> 3<C-Y>
-nnoremap <C-A-Y> 3<C-Y>
-nnoremap <C-X> <C-Y>
-nnoremap < <C-E>
-nnoremap > <C-Y> 
-nnoremap u :undo<CR>
-nnoremap U :redo<CR>
-nnoremap <C-G> :Telescope grep_string<CR>
-nnoremap <C-S> :Telescope git_status<CR>
-nnoremap <C-R> :Buffer<CR>
-nnoremap <C-A-R> :Telescope find_files<CR>
-nnoremap <leader>t :NvimTreeFocus<CR>
+nnoremap k -
+nnoremap <leader>a :NvimTreeFocus<CR>
 nnoremap <leader>e :Texplore<CR>
-nnoremap <leader>g :Neogit cwd=%:p:h<CR>
-nnoremap <leader>G :Neogit<CR>
 nnoremap <leader>` :FloatermNew --cwd=<buffer><CR>
-nnoremap <C-P> :Buffer<CR>
-nnoremap <F6> :FloatermNew<CR>
-tnoremap <Esc> <C-\><C-n>
-nnoremap ! :bprevious<CR>
-nnoremap @ :bnext<CR>
-nnoremap Q :buffer #<CR>
-nnoremap <leader>r :bdelete %<CR>
+nnoremap <leader>G :Neogit<CR>
+nnoremap <leader>g :Neogit cwd=%:p:h<CR>
 nnoremap <leader>m :call WrapOrNowrap()<CR>
+nnoremap <leader>q :nohlsearch<CR>
+nnoremap <leader>r :bdelete %<CR>
+nnoremap <leader>s :let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hlsearch<CR>
+nnoremap <leader>v :call ReplaceInplace()<CR>
+nnoremap <leader>w :write<CR>
+nnoremap <leader>Z :<C-U>call NoelleSCC("disable","all")<CR>
+nnoremap <leader>z :<C-U>call NoelleSCC("enable","all")<CR>
+nnoremap Q :buffer #<CR>
+nnoremap U :redo<CR>
+nnoremap u :undo<CR>
+nnoremap X 2<C-Y>
+nnoremap Z 2<C-E>
+tnoremap <Esc> <C-\><C-n>
 vnoremap <leader>c :'<,'>!lua ~/.config/nvim/lua/comment.lua %:e<CR>
 vnoremap <leader>C :'<,'>!lua ~/.config/nvim/lua/uncomment.lua %:e<CR>
-vnoremap <leader>z :<C-U>call NoelleSCC("enable","selection")<CR>
-nnoremap <leader>z :<C-U>call NoelleSCC("enable","all")<CR>
 vnoremap <leader>Z :<C-U>call NoelleSCC("disable","selection")<CR>
-nnoremap <leader>Z :<C-U>call NoelleSCC("disable","all")<CR>
-nnoremap <leader>v :call ReplaceInplace()<CR>
+vnoremap <leader>z :<C-U>call NoelleSCC("enable","selection")<CR>
+vnoremap <silent> <leader>d :<C-U>call Demangle()<CR>
 
 " --- functions ------------------------------------------------------
 
