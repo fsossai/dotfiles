@@ -55,7 +55,7 @@ nnoremap - j
 nnoremap + k
 nnoremap = k
 nnoremap k -
-nnoremap <leader>a :NvimTreeFocus<CR>
+nnoremap <leader>a :Neotree<CR>
 nnoremap <leader>e :Texplore<CR>
 nnoremap <leader>` :FloatermNew --cwd=<buffer><CR>
 nnoremap <leader>G :Neogit<CR>
