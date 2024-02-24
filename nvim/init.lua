@@ -35,7 +35,6 @@ require("lazy").setup {
   { "nvim-telescope/telescope.nvim" },
   { "nvim-tree/nvim-tree.lua", config = true },
   { "preservim/tagbar" },
-  { "preservim/tagbar" },
   { "rhysd/vim-clang-format" },
   { "rktjmp/fwatch.nvim" },
   { "RRethy/nvim-base16" },
