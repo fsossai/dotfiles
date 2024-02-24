@@ -32,7 +32,7 @@ require("lazy").setup {
   { "morhetz/gruvbox" },
   { "MunifTanjim/nui.nvim" },
   { "nvim-telescope/telescope.nvim" },
-  { "nvim-tree/nvim-tree.lua", config = true },
+  { "nvim-tree/nvim-tree.lua", config = false },
   { "preservim/tagbar" },
   { "rhysd/vim-clang-format" },
   { "rktjmp/fwatch.nvim" },
