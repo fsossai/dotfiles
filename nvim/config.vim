@@ -35,6 +35,7 @@ nmap <silent> <A-p> :wincmd p<CR>
 nmap <silent> <A-Space> :wincmd w<CR>
 nnoremap @ :bnext<CR>
 nnoremap ! :bprevious<CR>
+nnoremap <C-A-D> :DiffviewClose<CR>
 nnoremap <C-A-E> 3<C-E>
 nnoremap <C-A-H> :vertical resize +5<CR>
 nnoremap <C-A-J> :resize +3<CR>
@@ -43,13 +44,12 @@ nnoremap <C-A-L> :vertical resize -5<CR>
 nnoremap <C-A-R> :Telescope find_files<CR>
 nnoremap <C-A-X> 3<C-Y>
 nnoremap <C-A-Y> 3<C-Y>
-nnoremap < <C-E>
+nnoremap <C-D> :DiffviewOpen<CR>
 nnoremap <C-G> :Telescope grep_string<CR>
 nnoremap <C-P> :Buffer<CR>
 nnoremap <C-R> :Buffer<CR>
 nnoremap <C-S> :Telescope git_status<CR>
 nnoremap <C-X> <C-Y>
-nnoremap > <C-Y> 
 nnoremap <F6> :FloatermNew<CR>
 nnoremap - j
 nnoremap + k
