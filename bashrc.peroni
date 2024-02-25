@@ -1,5 +1,5 @@
 MACHINE="peroni"
-PS1="╭╴\[\033[01;32m\]\u\033[01;34m@\033[0m$?:\033[01;35m${MACHINE}:\[\033[01;34m\]\w\[\033[00m\]\n╰╼$ \[\e[0m\]"
+PS1="╭╴\[\033[01;32m\]\u\033[01;34m@\033[0m\$?:\033[01;35m${MACHINE}:\[\033[01;34m\]\w\[\033[00m\]\n╰╼$ \[\e[0m\]"
 
 alias clang-15="/nfs-scratch/fsv1684/llvm-15.0.1/build/bin/clang++"
 alias clang-16="/nfs-scratch/fsv1684/llvm-16.0.3/build/bin/clang++"
