@@ -14,6 +14,10 @@ return {
        local filesystem_commands = require("neo-tree.sources.filesystem.commands")
        filesystem_commands.expand_all_nodes(state, node)
      end
+     local function focus_parent(state)
+       local node = state.tree:get_node()
+       require("neo-tree.ui.renderer").focus_node(state, node:get_parent_id())
+     end
 
      require("neo-tree").setup {
        window = {
@@ -76,6 +80,7 @@ return {
             ["<"] = "prev_source",
             [">"] = "next_source",
             ["i"] = "show_file_details",
+            ["-"] = focus_parent,
           }
         },
       }
