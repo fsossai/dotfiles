@@ -34,8 +34,8 @@ local on_attach = function(client, bufnr)
     buf_set_keymap('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
     buf_set_keymap('n', '<leader>ca', '<cmd>CodeActionMenu<CR>', opts)
     buf_set_keymap('n', '<leader>e', '<cmd>lua vim.diagnostic.show_line_diagnostics()<CR>', opts)
-    buf_set_keymap('n', 'g[', '<cmd>lua vim.diagnostic.goto_prev({ severity_limit = "Warning" })<CR>', opts)
-    buf_set_keymap('n', 'g]', '<cmd>lua vim.diagnostic.goto_next({ severity_limit = "Warning" })<CR>', opts)
+    buf_set_keymap('n', '[a', '<cmd>lua vim.diagnostic.goto_prev({ severity_limit = "Warning" })<CR>', opts)
+    buf_set_keymap('n', ']a', '<cmd>lua vim.diagnostic.goto_next({ severity_limit = "Warning" })<CR>', opts)
     buf_set_keymap('n', '<leader>f', '<cmd>lua vim.lsp.buf.format()<CR>', opts)
 end
 
