@@ -57,6 +57,7 @@ export GREP_COLOR="1;35"
 export LD_LIBRARY_PATH="/nfs-scratch/fsv1684/.local/lib:$LD_LIBRARY_PATH"
 export PATH="/home/fsv1684/s/ispc-v1.20.0-linux/bin:$PATH"
 export PATH="/home/fsv1684/s/pin-3.27-98718-gbeaa5d51e-gcc-linux:$PATH"
+export PATH="/nfs-scratch/fsv1684/.local/bin:$PATH"
 export SPEC="/nfs-scratch/fsv1684/pspdg/gym/all_benchmark_suites/build/SPEC2017/SPEC2017"
 
 source "/home/fsv1684/.fzf.bash"
