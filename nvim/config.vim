@@ -13,6 +13,7 @@ set indentkeys-=0#
 set termguicolors
 set cursorline
 set encoding=utf8
+set diffopt=context:0
 let g:airline_powerline_fonts = 1
 syntax on
 colorscheme tokyonight-night 
