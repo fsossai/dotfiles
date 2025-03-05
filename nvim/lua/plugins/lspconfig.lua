@@ -52,6 +52,9 @@ return {
     lspconfig.pyright.setup {}
     lspconfig.clangd.setup {
       on_attach = on_attach,
+      flags = {
+        debounce_text_changes = 2000,
+      },
       capabilities = require("cmp_nvim_lsp").default_capabilities(
         vim.lsp.protocol.make_client_capabilities()
       )

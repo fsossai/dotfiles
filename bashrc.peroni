@@ -1,6 +1,18 @@
 MACHINE="peroni"
 PS1="╭╴\[\033[01;32m\]\u\033[01;34m@\033[0m\$?:\033[01;35m${MACHINE}:\[\033[01;34m\]\w\[\033[00m\]\n╰╼$ \[\e[0m\]"
 
+function balanced () {
+  N=$1
+  shift 1
+  taskset -c $(seq -s, 0 2 $(($N*2-2))) "$@"
+}
+
+function scatter () {
+  N=$1
+  shift 1
+  taskset -c $(seq -s, 0 $(($N-1))) "$@"
+}
+
 alias clang-15="/nfs-scratch/fsv1684/llvm-15.0.1/build/bin/clang++"
 alias clang-16="/nfs-scratch/fsv1684/llvm-16.0.3/build/bin/clang++"
 alias dubliner="ssh federico@dubliner.cs.northwestern.edu"
@@ -21,7 +33,6 @@ alias enable-spec="export SPEC=/home/fsv1684/s/wholeprogram_benchmarks/build/SPE
 alias fgrep="fgrep --color=auto"
 alias grep="grep --color=auto"
 alias here="cd \$(realpath .)"
-alias hyperfine="/home/fsv1684/s/repo/hyperfine/target/release/hyperfine"
 alias llk="ls -l --block-size=K"
 alias llk="ls -l --block-size=K"
 alias ll="ls -l --color=auto"
@@ -61,6 +72,7 @@ export LD_LIBRARY_PATH="/nfs-scratch/fsv1684/.local/lib64:$LD_LIBRARY_PATH"
 export PATH="/home/fsv1684/s/ispc-v1.20.0-linux/bin:$PATH"
 export PATH="/nfs-scratch/fsv1684/.local/bin:$PATH"
 export SPEC="/nfs-scratch/fsv1684/pspdg/gym/all_benchmark_suites/build/SPEC2017/SPEC2017"
+export EXTRAE_HOME="/nfs-scratch/fsv1684/.local"
 
 source "/home/fsv1684/.fzf.bash"
 source "/opt/rh/gcc-toolset-13/enable"

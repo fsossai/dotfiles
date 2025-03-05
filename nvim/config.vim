@@ -19,6 +19,7 @@ syntax on
 colorscheme tokyonight-night 
 highlight cursorline guibg=#3a3a3a
 highlight Visual guibg=#555555
+
 " highlight Visual guibg=#101010 guifg=#a0a0a0
 
 " --- files ----------------------------------------------------------
@@ -102,7 +103,6 @@ function! OpenBitcode()
     silent execute '%!llvm-dis -f -o /dev/stdout %'
     file %:r.ll
     set syntax=lifelines
-    set readonly
   endif
 endfunction
 
