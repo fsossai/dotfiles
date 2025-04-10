@@ -26,6 +26,8 @@ highlight Visual guibg=#555555
 
 autocmd BufRead,BufNewFile *.job set syntax=bash
 autocmd BufReadPost *.bc :call OpenBitcode()
+autocmd BufLeave * let b:winview = winsaveview()
+autocmd BufEnter * if exists('b:winview') | call winrestview(b:winview) | endif
 
 " --- map ------------------------------------------------------------
 
