@@ -70,8 +70,7 @@ nnoremap <leader>v :call ReplaceInplace()<CR>
 nnoremap <leader>w :write<CR>
 nnoremap <leader>Z :<C-U>call NoelleSCC("disable","all")<CR>
 nnoremap <leader>z :<C-U>call NoelleSCC("enable","all")<CR>
-nnoremap `/ /
-nnoremap / :let @/ = input('Search: ')<CR>
+nnoremap `/ :let @/ = input('Search: ')<CR>
 nnoremap Q :buffer #<CR>
 nnoremap U :redo<CR>
 nnoremap u :undo<CR>
