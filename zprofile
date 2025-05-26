@@ -1,7 +1,6 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 export GREP_COLOR='1;35'
-export GREP_OPTIONS='--color=always'
 
 alias less='less -R'
 alias ll='ls -l --color'
