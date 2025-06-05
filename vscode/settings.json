@@ -1,3 +1,23 @@
 {
-    "explorer.autoReveal": false
+    "explorer.autoReveal": true,
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "window.zoomLevel": 1,
+    "cmake.configureOnOpen": false,
+    "cmake.showOptionsMovedNotification": false,
+    "git.openRepositoryInParentFolders": "always",
+    "workbench.colorTheme": "Visual Studio 2017 Dark - C++",
+    "editor.tabCompletion": "on",
+    "editor.multiCursorModifier": "ctrlCmd",
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+    "files.associations": {
+        "*.job": "submit_file",
+        "*.toml": "toml"
+    }
 }
