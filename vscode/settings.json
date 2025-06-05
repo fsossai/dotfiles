@@ -19,5 +19,6 @@
     "files.associations": {
         "*.job": "submit_file",
         "*.toml": "toml"
-    }
+    },
+    "git.confirmSync": false
 }
