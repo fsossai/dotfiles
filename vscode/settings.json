@@ -11,7 +11,7 @@
     "editor.tabCompletion": "on",
     "editor.multiCursorModifier": "ctrlCmd",
     "github.copilot.enable": {
-        "*": false,
+        "*": true,
         "plaintext": false,
         "markdown": false,
         "scminput": false
@@ -20,5 +20,7 @@
         "*.job": "submit_file",
         "*.toml": "toml"
     },
-    "git.confirmSync": false
+    "git.confirmSync": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "makefile.configureOnOpen": true
 }

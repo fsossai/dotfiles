@@ -20,7 +20,7 @@
     "when": "breadcrumbsActive && breadcrumbsVisible"
   },
   {
-    "key": "ctrl+w",
+    "key": "alt+w",
     "command": "cursorWordLeft",
     "when": "textInputFocus"
   },
@@ -89,7 +89,7 @@
     "when": "textInputFocus"
   },
   {
-    "key": "ctrl+e",
+    "key": "alt+e",
     "command": "cursorWordEndRight",
     "when": "textInputFocus"
   },
@@ -104,8 +104,23 @@
     "when": "textInputFocus"
   },
   {
-    "key": "ctrl+shift+e",
-    "command": "cursorWordEndRightSelect",
+    "key": "ctrl+k",
+    "command": "cursorMove",
+    "args": {
+      "to": "up",
+      "by": "line",
+      "value": 5
+    },
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "cursorMove",
+    "args": {
+      "to": "down",
+      "by": "line",
+      "value": 5
+    },
     "when": "textInputFocus"
   },
   {
@@ -131,15 +146,11 @@
     "when": "inFilesPicker && inQuickOpen"
   },
   {
-    "key": "cmd+u",
-    "command": "bracketeer.changeBracketsTo",
-    "when": "editorTextFocus"
-  },
-  {
     "key": "ctrl+.",
     "command": "editor.action.smartSelect.grow",
     "when": "editorTextFocus"
-  },{
+  },
+  {
     "key": "ctrl+,",
     "command": "editor.action.smartSelect.shrink",
     "when": "editorTextFocus"
@@ -187,5 +198,117 @@
     "key": "ctrl+l",
     "command": "workbench.action.openNextRecentlyUsedEditor",
     "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "-deleteRight",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+up",
+    "command": "workbench.action.terminal.copyLastCommandOutput",
+    "when": "terminal.active && terminalFocus"
+  },
+  {
+    "key": "ctrl+f",
+    "command": "editor.action.formatDocument",
+    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+  },
+  {
+    "key": "shift+cmd+o",
+    "command": "-ftp.open"
+  },
+  {
+    "key": "ctrl+x",
+    "command": "editorScroll",
+    "when": "editorTextFocus",
+    "args": {
+      "to": "up",
+      "by": "line",
+      "revealCursor": false
+    }
+  },
+  {
+    "key": "ctrl+e",
+    "command": "editorScroll",
+    "when": "editorTextFocus",
+    "args": {
+      "to": "down",
+      "by": "line",
+      "revealCursor": true
+    }
+  },
+  {
+    "key": "alt+q",
+    "command": "workbench.action.previousEditor"
+  },
+  {
+    "key": "alt+q",
+    "command": "workbench.action.quickOpenLeastRecentlyUsedEditor"
+  },
+  {
+    "key": "alt+q",
+    "command": "workbench.action.openNextRecentlyUsedEditor",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "alt+q",
+    "command": "workbench.action.quickOpenNavigateNextInEditorPicker",
+    "when": "inEditorsPicker && inQuickOpen"
+  },
+  {
+    "key": "cmd+o",
+    "command": "editor.action.accessibleViewGoToSymbol",
+    "when": "accessibilityHelpIsShown && accessibleViewGoToSymbolSupported || accessibleViewGoToSymbolSupported && accessibleViewIsShown"
+  },
+  {
+    "key": "shift+cmd+o",
+    "command": "-editor.action.accessibleViewGoToSymbol",
+    "when": "accessibilityHelpIsShown && accessibleViewGoToSymbolSupported || accessibleViewGoToSymbolSupported && accessibleViewIsShown"
+  },
+  {
+    "key": "cmd+o",
+    "command": "workbench.action.gotoSymbol",
+    "when": "!accessibilityHelpIsShown && !accessibleViewIsShown"
+  },
+  {
+    "key": "shift+cmd+o",
+    "command": "-workbench.action.gotoSymbol",
+    "when": "!accessibilityHelpIsShown && !accessibleViewIsShown"
+  },
+  {
+    "key": "shift+cmd+o",
+    "command": "workbench.action.files.openFile",
+    "when": "false"
+  },
+  {
+    "key": "cmd+o",
+    "command": "-workbench.action.files.openFile",
+    "when": "false"
+  },
+  {
+    "key": "shift+cmd+o",
+    "command": "workbench.action.files.openFolderViaWorkspace",
+    "when": "!openFolderWorkspaceSupport && workbenchState == 'workspace'"
+  },
+  {
+    "key": "cmd+o",
+    "command": "-workbench.action.files.openFolderViaWorkspace",
+    "when": "!openFolderWorkspaceSupport && workbenchState == 'workspace'"
+  },
+  {
+    "key": "shift+cmd+o",
+    "command": "workbench.action.files.openFileFolder",
+    "when": "isMacNative && openFolderWorkspaceSupport"
+  },
+  {
+    "key": "cmd+o",
+    "command": "-workbench.action.files.openFileFolder",
+    "when": "isMacNative && openFolderWorkspaceSupport"
   }
 ]
