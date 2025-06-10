@@ -124,19 +124,6 @@
     "when": "textInputFocus"
   },
   {
-    "key": "ctrl+l",
-    "command": "workbench.action.previousEditor"
-  },
-  {
-    "key": "ctrl+l",
-    "command": "workbench.action.quickOpenLeastRecentlyUsedEditor"
-  },
-  {
-    "key": "ctrl+l",
-    "command": "workbench.action.quickOpenNavigateNextInEditorPicker",
-    "when": "inEditorsPicker && inQuickOpen"
-  },
-  {
     "key": "ctrl+p",
     "command": "workbench.action.quickOpen"
   },
@@ -188,16 +175,6 @@
     "key": "ctrl+;",
     "command": "workbench.action.terminal.focus",
     "when": "terminal.active"
-  },
-  {
-    "key": "ctrl+;",
-    "command": "workbench.action.openNextRecentlyUsedEditor",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+l",
-    "command": "workbench.action.openNextRecentlyUsedEditor",
-    "when": "terminalFocus"
   },
   {
     "key": "ctrl+d",
@@ -262,7 +239,7 @@
     "when": "inEditorsPicker && inQuickOpen"
   },
   {
-    "key": "cmd+o",
+    "key": "f12",
     "command": "editor.action.accessibleViewGoToSymbol",
     "when": "accessibilityHelpIsShown && accessibleViewGoToSymbolSupported || accessibleViewGoToSymbolSupported && accessibleViewIsShown"
   },
@@ -272,7 +249,7 @@
     "when": "accessibilityHelpIsShown && accessibleViewGoToSymbolSupported || accessibleViewGoToSymbolSupported && accessibleViewIsShown"
   },
   {
-    "key": "cmd+o",
+    "key": "f12",
     "command": "workbench.action.gotoSymbol",
     "when": "!accessibilityHelpIsShown && !accessibleViewIsShown"
   },
@@ -310,5 +287,50 @@
     "key": "cmd+o",
     "command": "-workbench.action.files.openFileFolder",
     "when": "isMacNative && openFolderWorkspaceSupport"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "editor.action.deleteLines",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+;",
+    "command": "workbench.action.openNextRecentlyUsedEditor",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+f12",
+    "command": "editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus"
+  },
+  {
+    "key": "f12",
+    "command": "-editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus"
+  },
+  {
+    "key": "f12",
+    "command": "workbench.action.files.openLocalFileFolder",
+    "when": "remoteFileDialogVisible"
+  },
+  {
+    "key": "cmd+o",
+    "command": "-workbench.action.files.openLocalFileFolder",
+    "when": "remoteFileDialogVisible"
+  },
+  {
+    "key": "cmd+f12",
+    "command": "goToNextReference",
+    "when": "inReferenceSearchEditor || referenceSearchVisible"
+  },
+  {
+    "key": "f12",
+    "command": "-goToNextReference",
+    "when": "inReferenceSearchEditor || referenceSearchVisible"
+  },
+  {
+    "key": "ctrl+space",
+    "command": "workbench.action.openNextRecentlyUsedEditor",
+    "when": "terminalFocus"
   }
 ]
