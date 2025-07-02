@@ -189,7 +189,7 @@
   {
     "key": "ctrl+up",
     "command": "workbench.action.terminal.copyLastCommandOutput",
-    "when": "terminal.active && terminalFocus"
+    "when": "terminalFocus"
   },
   {
     "key": "ctrl+f",
@@ -289,7 +289,7 @@
     "when": "isMacNative && openFolderWorkspaceSupport"
   },
   {
-    "key": "ctrl+l",
+    "key": "cmd+l",
     "command": "editor.action.deleteLines",
     "when": "textInputFocus && !editorReadonly"
   },
@@ -332,5 +332,77 @@
     "key": "ctrl+space",
     "command": "workbench.action.openNextRecentlyUsedEditor",
     "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+\\",
+    "command": "git.commit"
+  },
+  {
+    "key": "ctrl+shift+\\",
+    "command": "git.push"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "expandLineSelection",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "cmd+l",
+    "command": "-expandLineSelection",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+shift+up",
+    "command": "workbench.action.terminal.copyLastCommand",
+    "when": "terminal.active && terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+r",
+    "command": "git.refresh",
+    "when": "view = scm"
+  },
+  {
+    "key": "cmd+shift+s",
+    "command": "git.stage"
+  },
+  {
+    "key": "cmd+ctrl+shift+s",
+    "command": "git.stageAllTracked",
+    "when": "view = scm"
+  },
+  {
+    "key": "ctrl+c",
+    "command": "git.commit",
+    "when": "editorTextFocus || view = scm"
+  },
+  {
+    "key": "shift+tab",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "-selectPrevSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+  },
+  {
+    "key": "tab",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "-selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+  },
+  {
+    "key": "tab",
+    "command": "-insertNextSuggestion",
+    "when": "hasOtherSuggestions && textInputFocus && !inSnippetMode && !suggestWidgetVisible && config.editor.tabCompletion == 'on'"
+  },
+  {
+    "key": "shift+tab",
+    "command": "-insertPrevSuggestion",
+    "when": "hasOtherSuggestions && textInputFocus && !inSnippetMode && !suggestWidgetVisible && config.editor.tabCompletion == 'on'"
   }
 ]

@@ -11,7 +11,7 @@
     "editor.tabCompletion": "on",
     "editor.multiCursorModifier": "ctrlCmd",
     "github.copilot.enable": {
-        "*": true,
+        "*": false,
         "plaintext": false,
         "markdown": false,
         "scminput": false
@@ -22,5 +22,8 @@
     },
     "git.confirmSync": false,
     "security.workspace.trust.untrustedFiles": "open",
-    "makefile.configureOnOpen": true
+    "makefile.configureOnOpen": true,
+    "editor.autoClosingBrackets": "never",
+    "editor.inlayHints.enabled": "off",
+    "github.copilot.nextEditSuggestions.enabled": true
 }
