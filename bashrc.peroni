@@ -62,6 +62,7 @@ alias zgrep="zgrep --color=auto"
 bind "set show-all-if-ambiguous on"
 bind "TAB:menu-complete"
 bind '"\e[Z":menu-complete-backward'
+# stty -ixon
 
 export C_INCLUDE_PATH="/nfs-scratch/fsv1684/.local/include:$C_INCLUDE_PATH" 
 export CPLUS_INCLUDE_PATH="/nfs-scratch/fsv1684/.local/include:$CPLUS_INCLUDE_PATH" 
@@ -70,10 +71,11 @@ export GREP_COLOR="1;35"
 export JAVA_HOME="/nfs-scratch/fsv1684/repo/jdk-22.0.2"
 export LD_LIBRARY_PATH="/nfs-scratch/fsv1684/.local/lib:$LD_LIBRARY_PATH"
 export LD_LIBRARY_PATH="/nfs-scratch/fsv1684/.local/lib64:$LD_LIBRARY_PATH"
+export PATH="/home/fsv1684/.local/bin:$PATH"
 export PATH="/home/fsv1684/s/ispc-v1.20.0-linux/bin:$PATH"
 export PATH="/nfs-scratch/fsv1684/.local/bin:$PATH"
 export PIN_ROOT="/nfs-scratch/fsv1684/pin-external-3.31-98869-gfa6f126a8-gcc-linux"
-export SPEC="/nfs-scratch/fsv1684/pspdg/gym/all_benchmark_suites/build/SPEC2017/SPEC2017"
+export PKG_CONFIG_PATH="/nfs-scratch/fsv1684/.local/lib64/pkgconfig:$PKG_CONFIG_PATH"
 
 source "/home/fsv1684/.fzf.bash"
 source "/opt/rh/gcc-toolset-13/enable"
