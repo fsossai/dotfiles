@@ -1,5 +1,4 @@
-MACHINE="peroni"
-PS1="╭╴\[\033[01;32m\]\u\033[01;34m@\033[0m\$?:\033[01;35m${MACHINE}:\[\033[01;34m\]\w\[\033[00m\]\n╰╼$ \[\e[0m\]"
+PS1="╭╴\[\033[01;32m\]\u\033[01;34m@\033[0m\$?:\033[01;35m$(hostname -s):\[\033[01;34m\]\w\[\033[00m\]\n╰╼$ \[\e[0m\]"
 
 function balanced () {
   N=$1
@@ -83,3 +82,5 @@ source "/project/extra/burnCPU/enable"
 source "/project/extra/llvm/14.0.6/enable"
 source "/project/extra/neovim/0.10.0/enable"
 source "/project/extra/z3/4.13.0/enable"
+source "/project/gllvm/enable"
+
