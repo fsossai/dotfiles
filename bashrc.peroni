@@ -63,6 +63,8 @@ bind "TAB:menu-complete"
 bind '"\e[Z":menu-complete-backward'
 # stty -ixon
 
+export Boost_INCLUDE_DIRS=/nfs-scratch/fsv1684/.local/include
+export Boost_LIBRARY_DIRS=/nfs-scratch/fsv1684/.local/lib
 export C_INCLUDE_PATH="/nfs-scratch/fsv1684/.local/include:$C_INCLUDE_PATH" 
 export CPLUS_INCLUDE_PATH="/nfs-scratch/fsv1684/.local/include:$CPLUS_INCLUDE_PATH" 
 export EXTRAE_HOME="/nfs-scratch/fsv1684/.local"
@@ -73,8 +75,10 @@ export LD_LIBRARY_PATH="/nfs-scratch/fsv1684/.local/lib64:$LD_LIBRARY_PATH"
 export PATH="/home/fsv1684/.local/bin:$PATH"
 export PATH="/home/fsv1684/s/ispc-v1.20.0-linux/bin:$PATH"
 export PATH="/nfs-scratch/fsv1684/.local/bin:$PATH"
+export PATH="/nfs-scratch/fsv1684/repo/FlameGraph:$PATH"
 export PIN_ROOT="/nfs-scratch/fsv1684/pin-external-3.31-98869-gfa6f126a8-gcc-linux"
 export PKG_CONFIG_PATH="/nfs-scratch/fsv1684/.local/lib64/pkgconfig:$PKG_CONFIG_PATH"
+export dubliner="federico@dubliner.cs.northwestern.edu"
 
 source "/home/fsv1684/.fzf.bash"
 source "/opt/rh/gcc-toolset-13/enable"

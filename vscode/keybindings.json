@@ -290,8 +290,13 @@
   },
   {
     "key": "cmd+l",
-    "command": "editor.action.deleteLines",
-    "when": "textInputFocus && !editorReadonly"
+    "command": "workbench.action.focusAuxiliaryBar",
+    "when": "!auxiliaryBarFocus"
+  },
+  {
+    "key": "cmd+l",
+    "command": "workbench.action.toggleAuxiliaryBar",
+    "when": "auxiliaryBarFocus"
   },
   {
     "key": "ctrl+;",
