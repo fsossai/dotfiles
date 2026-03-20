@@ -296,7 +296,7 @@
   {
     "key": "cmd+l",
     "command": "workbench.action.toggleAuxiliaryBar",
-    "when": "auxiliaryBarFocus"
+    "when": "auxiliaryBarVisible"
   },
   {
     "key": "ctrl+;",
