@@ -289,16 +289,6 @@
     "when": "isMacNative && openFolderWorkspaceSupport"
   },
   {
-    "key": "cmd+l",
-    "command": "workbench.action.focusAuxiliaryBar",
-    "when": "!auxiliaryBarFocus"
-  },
-  {
-    "key": "cmd+l",
-    "command": "workbench.action.toggleAuxiliaryBar",
-    "when": "auxiliaryBarVisible"
-  },
-  {
     "key": "ctrl+;",
     "command": "workbench.action.openNextRecentlyUsedEditor",
     "when": "terminalFocus"
@@ -409,5 +399,56 @@
     "key": "shift+tab",
     "command": "-insertPrevSuggestion",
     "when": "hasOtherSuggestions && textInputFocus && !inSnippetMode && !suggestWidgetVisible && config.editor.tabCompletion == 'on'"
+  },
+  {
+    "key": "shift+cmd+k",
+    "command": "-editor.action.deleteLines",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+cmd+`",
+    "command": "workbench.action.toggleMaximizedPanel"
+  },
+  {
+    "key": "ctrl+shift+cmd+l",
+    "command": "chatgpt.addToThread",
+    "when": "!auxiliaryBarFocus && editor.hasSelection"
+  },
+  {
+    "key": "cmd+l",
+    "command": "-continue.focusContinueInput"
+  },
+  {
+    "key": "cmd+l",
+    "command": "editor.action.deleteLines"
+  },
+  {
+    "key": "shift+cmd+l",
+    "command": "-continue.focusContinueInputWithoutClear"
+  },
+  {
+    "key": "shift+cmd+l",
+    "command": "continue.focusContinueInputWithoutClear",
+    "when": "!auxiliaryBarFocus && editor.hasSelection"
+  },
+  {
+    "key": "shift+cmd+i",
+    "command": "-workbench.action.chat.openagent",
+    "when": "config.chat.agent.enabled && !chatSetupDisabledInWorkspace && !chatSetupHidden"
+  },
+  {
+    "key": "shift+cmd+l",
+    "command": "workbench.action.focusLastEditorGroup",
+    "when": "auxiliaryBarFocus"
+  },
+  {
+    "key": "shift+cmd+l",
+    "command": "continue.focusContinueInput",
+    "when": "!auxiliaryBarFocus && !editor.hasSelection"
+  },
+  {
+    "key": "ctrl+shift+cmd+l",
+    "command": "chatgpt.sidebarView.focus",
+    "when": "!auxiliaryBarFocus && !editor.hasSelection"
   }
 ]

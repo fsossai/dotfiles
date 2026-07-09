@@ -1,5 +1,5 @@
 {
-    "explorer.autoReveal": true,
+    "explorer.autoReveal": false,
     "[python]": {
         "editor.formatOnType": true
     },
@@ -9,7 +9,6 @@
     "git.openRepositoryInParentFolders": "always",
     "workbench.colorTheme": "Visual Studio 2017 Dark - C++",
     "editor.tabCompletion": "on",
-    "editor.multiCursorModifier": "ctrlCmd",
     "github.copilot.enable": {
         "*": false,
         "plaintext": false,
@@ -25,5 +24,33 @@
     "makefile.configureOnOpen": true,
     "editor.autoClosingBrackets": "never",
     "editor.inlayHints.enabled": "off",
-    "github.copilot.nextEditSuggestions.enabled": true
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "gitlens.views.scm.grouped.views": {
+        "commits": true,
+        "branches": true,
+        "remotes": true,
+        "stashes": true,
+        "tags": true,
+        "worktrees": true,
+        "contributors": true,
+        "fileHistory": false,
+        "repositories": true,
+        "searchAndCompare": true,
+        "launchpad": false
+    },
+    "[cpp]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+    },
+    "python.analysis.typeCheckingMode": "standard",
+    "redhat.telemetry.enabled": true,
+    "claudeCode.preferredLocation": "panel",
+    "terminal.integrated.suggest.cdPath": "off",
+    "terminal.integrated.suggest.enabled": false,
+    "clangd.path": "/Users/fsossai/Library/Application Support/Code/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/21.1.0/clangd_21.1.0/bin/clangd",
+    "gitlens.ai.model": "vscode",
+    "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+    "claudeCode.selectedModel": "opus",
+    "chat.viewSessions.orientation": "stacked",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.find.cursorMoveOnType": false
 }
