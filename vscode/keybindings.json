@@ -412,7 +412,7 @@
   {
     "key": "ctrl+shift+cmd+l",
     "command": "chatgpt.addToThread",
-    "when": "!auxiliaryBarFocus && editor.hasSelection"
+    "when": "editor.hasSelection"
   },
   {
     "key": "cmd+l",
@@ -449,7 +449,7 @@
   {
     "key": "ctrl+shift+cmd+l",
     "command": "chatgpt.sidebarView.focus",
-    "when": "!auxiliaryBarFocus && !editor.hasSelection"
+    "when": "!auxiliaryBarFocus"
   },
   {
     "key": "shift+cmd+i",
