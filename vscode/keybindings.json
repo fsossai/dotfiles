@@ -449,7 +449,7 @@
   {
     "key": "ctrl+shift+cmd+l",
     "command": "chatgpt.sidebarView.focus",
-    "when": "!auxiliaryBarFocus"
+    "when": "!auxiliaryBarFocus && !editor.hasSelection"
   },
   {
     "key": "shift+cmd+i",
