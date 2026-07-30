@@ -410,11 +410,6 @@
     "command": "workbench.action.toggleMaximizedPanel"
   },
   {
-    "key": "ctrl+shift+cmd+l",
-    "command": "chatgpt.addToThread",
-    "when": "editor.hasSelection"
-  },
-  {
     "key": "cmd+l",
     "command": "-continue.focusContinueInput"
   },
@@ -447,17 +442,49 @@
     "when": "!auxiliaryBarFocus && !editor.hasSelection"
   },
   {
-    "key": "ctrl+shift+cmd+l",
-    "command": "chatgpt.sidebarView.focus",
-    "when": "!auxiliaryBarFocus && !editor.hasSelection"
-  },
-  {
     "key": "shift+cmd+i",
     "command": "continue.focusEdit",
-    "when": "!auxiliaryBarFocus && editor.hasSelection"
+    "when": "!auxiliaryBarFocus"
   },
   {
     "key": "cmd+i",
     "command": "-continue.focusEdit"
+  },
+  {
+    "key": "cmd+0",
+    "command": "-workbench.action.focusSideBar"
+  },
+  {
+    "key": "cmd+0",
+    "command": "workbench.action.focusAuxiliaryBar"
+  },
+  {
+    "key": "cmd+'",
+    "command": "chatgpt.addToThread",
+    "when": "editorHasSelection"
+  },
+  {
+    "key": "cmd+'",
+    "command": "-cline.addToChat",
+    "when": "editorHasSelection"
+  },
+  {
+    "key": "cmd+'",
+    "command": "-cline.focusChatInput",
+    "when": "!editorHasSelection"
+  },
+  {
+    "key": "cmd+k cmd+r",
+    "command": "-workbench.action.keybindingsReference"
+  },
+  {
+    "key": "cmd+k cmd+r",
+    "command": "git.revertSelectedRanges",
+    "when": "editorTextFocus && editorHasSelection"
+  },
+  {
+    "key": "cmd+k cmd+r",
+    "command": "-git.revertSelectedRanges",
+    "when": "editorTextFocus && !operationInProgress && resourceScheme == 'file'"
   }
 ]
