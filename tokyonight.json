@@ -45,7 +45,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.43033578991889954
   },
-  "Custom Directory" : "No",
+  "Horizontal Spacing" : 1,
   "Rows" : 25,
   "Default Bookmark" : "No",
   "Right Option Key Sends" : 2,
@@ -475,6 +475,13 @@
       "Text" : "[25;5~",
       "Label" : ""
     },
+    "0x7f-0x100000-0x33" : {
+      "Version" : 2,
+      "Apply Mode" : 1,
+      "Action" : 11,
+      "Text" : "0x15",
+      "Escaping" : 2
+    },
     "0xf70f-0x20000-0x0" : {
       "Version" : 0,
       "Action" : 10,
@@ -580,21 +587,15 @@
     "Green Component" : 0.78104287385940552
   },
   "Transparency" : 0,
-  "Ansi 1 Color" : {
-    "Red Component" : 0.96862745098039216,
-    "Color Space" : "sRGB",
-    "Blue Component" : 0.55686274509803924,
-    "Alpha Component" : 1,
-    "Green Component" : 0.46274509803921571
-  },
-  "Ansi 0 Color" : {
+  "Guid" : "DE0DFDB5-24EB-411E-BBA2-267265E96471",
+  "Ansi 2 Color" : {
     "Red Component" : 0,
     "Color Space" : "sRGB",
     "Blue Component" : 0,
     "Alpha Component" : 1,
-    "Green Component" : 0
+    "Green Component" : 0.7626492977142334
   },
-  "Horizontal Spacing" : 1,
+  "Custom Directory" : "No",
   "Ansi 4 Color" : {
     "Red Component" : 0.305511474609375,
     "Color Space" : "sRGB",
@@ -617,7 +618,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.77424591779708862
   },
-  "Normal Font" : "Monaco 15",
+  "Normal Font" : "CodeNewRomanNFM 17",
   "Link Color" : {
     "Red Component" : 0,
     "Color Space" : "sRGB",
@@ -625,12 +626,18 @@
     "Alpha Component" : 1,
     "Green Component" : 0.35915297269821167
   },
-  "Guid" : "DE0DFDB5-24EB-411E-BBA2-267265E96471",
-  "Ansi 2 Color" : {
+  "Ansi 0 Color" : {
     "Red Component" : 0,
     "Color Space" : "sRGB",
     "Blue Component" : 0,
     "Alpha Component" : 1,
-    "Green Component" : 0.7626492977142334
+    "Green Component" : 0
+  },
+  "Ansi 1 Color" : {
+    "Red Component" : 0.96862745098039216,
+    "Color Space" : "sRGB",
+    "Blue Component" : 0.55686274509803924,
+    "Alpha Component" : 1,
+    "Green Component" : 0.46274509803921571
   }
 }
