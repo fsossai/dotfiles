@@ -7,7 +7,6 @@
     "cmake.configureOnOpen": false,
     "cmake.showOptionsMovedNotification": false,
     "git.openRepositoryInParentFolders": "always",
-    "workbench.colorTheme": "Visual Studio 2017 Dark - C++",
     "editor.tabCompletion": "on",
     "github.copilot.enable": {
         "*": false,
@@ -52,5 +51,7 @@
     "claudeCode.selectedModel": "opus",
     "chat.viewSessions.orientation": "stacked",
     "diffEditor.ignoreTrimWhitespace": false,
-    "editor.find.cursorMoveOnType": false
+    "editor.find.cursorMoveOnType": false,
+    "@azure.argTenant": "",
+    "workbench.colorTheme": "Visual Studio 2017 Dark - C++"
 }

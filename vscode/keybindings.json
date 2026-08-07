@@ -486,5 +486,19 @@
     "key": "cmd+k cmd+r",
     "command": "-git.revertSelectedRanges",
     "when": "editorTextFocus && !operationInProgress && resourceScheme == 'file'"
+  },
+  {
+    "key": "shift+cmd+d",
+    "command": "editor.action.selectHighlights",
+    "when": "editorFocus"
+  },
+  {
+    "key": "shift+cmd+l",
+    "command": "-editor.action.selectHighlights",
+    "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+y",
+    "command": "workbench.action.files.revert"
   }
 ]
